@@ -31,5 +31,6 @@ This tool allows the user to perform additional data analysis on AEV EEProm data
 - Add debug mode (additional output to the command window)
 - Find bugs
 - Deploy to classmates
+- Add units to main GUI screen
 
 //End of readme
