@@ -1,11 +1,11 @@
 # AEV Data Analysis Plus
 ###### Data analysis tool built for ENGR 1182 in MATLAB
 
-**Author**: Noah Gula
-**Email**: gula.8@osu.edu
-**Version**: 1.0
-**Created**: 17 March 2016
-**Last Revision**: 17 March 2016
+- **Author**: Noah Gula
+- **Email**: gula.8@osu.edu
+- **Version**: 1.0
+- **Created**: 17 March 2016
+- **Last Revision**: 17 March 2016
 
 This tool allows the user to perform additional data analysis on AEV EEProm data. Portions of the software are used from Dustin West's AEV Analyis Tool (see lab manual for more information). 
 
