@@ -1,4 +1,22 @@
 %==========================================================================
+% AEV Data Analysis Plus - Advanced Energy Vehicle Data Analysis Software
+%
+% Refer to https://github.com/gulanr/dataAnalysisPlus for instructions
+% on how to use this tool.
+%
+% Other m-files required: None
+% Subfunctions: None
+% MAT-files required: None
+%
+% Author: Noah Gula
+% email address: gula.8@osu.edu
+% Last revision: 17 March 2016
+%
+% This software was built with the help of Dustin West's AEV Analysis Tool
+% (no liscense). For more information, see the AEV lab manual.
+%==========================================================================
+
+%==========================================================================
 % Initialize GUI
 %==========================================================================
 
@@ -124,9 +142,12 @@ uimenu(...
 %==========================================================================
 % Construct Components
 %==========================================================================
+
+% Get GUI data and save it
 hData = guidata(f);
 guidata(f,hData);
 
+% Begin construction here...
 hData.component.totalTime = uicontrol(...
     'Style','text',...
     'Parent',f,...
@@ -280,9 +301,9 @@ hData.component.averageEnergyValue = uicontrol(...
     'BackgroundColor',[1 1 1],...
     'FontWeight','normal');
 
-%==
-%
-%==
+%==========================================================================
+% Construct table
+%==========================================================================
 columnname{1} = 'Time (ms)';
 columnname{2} = 'Current (counts)';
 columnname{3} = 'Voltage (counts)';
@@ -311,23 +332,32 @@ hData.component.table = uitable(...
     'ColumnEditable', columneditable,...
     'units','normalized');
 
-%==
-%
-%==
+%==========================================================================
+% Resize GUI
+%==========================================================================
 
+% Save GUI data for @fResize
 guidata(f,hData);
 
+% Turn on GUI
 f.Visible = 'on';
 
+% User doesn't need to know that we're using an obsoleted property
 warning('off','MATLAB:HandleGraphics:ObsoletedProperty:JavaFrame');
 
+% Save GUI data
 guidata(f,hData);
 
+% Update GUI
 drawnow;
 
+% Maximize window
 jFrame = get(handle(gcf),'JavaFrame');
 jFrame.setMaximized(true);
 
+%==========================================================================
+% Welcome message and end of initialization
+%==========================================================================
 message = sprintf('This tool analyzes AEV data.\n\nBegin by going to file > Open EEProm file or Download Data from AEV.\n\nContact the author, Noah Gula, at gula.8@osu.edu with questions or concerns.');
 title = 'AEV Data Analysis Plus';
 msg = msgbox(message,title);

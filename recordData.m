@@ -1,7 +1,18 @@
 function recordData(varargin)
 
+%==========================================================================
+% recordData - Downloads data from the AEV. Written by Dustin West, but was
+% adapted for this software by Noah Gula
+%
+% Author: Dustin West, Noah Gula
+% email address: gula.8@osu.edu
+% Last revision: 17 March 2016
+%==========================================================================
+
+% Assign GUI variables
 f = varargin{1};
 
+% Get GUI data
 hData = guidata(f);
 
 % Delete any communication interface objects
