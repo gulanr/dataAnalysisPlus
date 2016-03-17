@@ -32,6 +32,6 @@ This tool allows the user to perform additional data analysis on AEV EEProm data
 - Find bugs
 - Deploy to classmates
 - Add units to main GUI screen
-- Resolve issue [#1](https://github.com/gulanr/dataAnalysisPlus/issues/1
+- Resolve issue [#1](https://github.com/gulanr/dataAnalysisPlus/issues/1)
 
 //End of readme
