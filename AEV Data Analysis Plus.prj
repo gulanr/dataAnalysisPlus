@@ -1,0 +1,83 @@
+<deployment-project plugin="plugin.apptool" plugin-version="1.0">
+  <configuration build-checksum="3674158560" file="C:\Users\Noah\Documents\ENGR 1182.01\dataAnalysisPlus\AEV Data Analysis Plus.prj" location="C:\Users\Noah\Documents\ENGR 1182.01\dataAnalysisPlus" name="AEV Data Analysis Plus" target="target.mlapps" target-name="Package App">
+    <param.appname>AEV Data Analysis Plus</param.appname>
+    <param.authnamewatermark>Noah Gula</param.authnamewatermark>
+    <param.email>gula.8@osu.edu</param.email>
+    <param.company>The Ohio State University</param.company>
+    <param.icon />
+    <param.icons />
+    <param.summary>Analysis software built on Dustin West's AEV_Analysis_Tool. Adds additional functionality.</param.summary>
+    <param.description>Analysis software built on Dustin West's AEV_Analysis_Tool. Adds additional functionality.</param.description>
+    <param.screenshot />
+    <param.version>1.0</param.version>
+    <param.products.name />
+    <param.products.id />
+    <param.products.version />
+    <param.platforms />
+    <param.output>C:\Users\Noah\Documents\ENGR 1182.01\packaged</param.output>
+    <param.guid>fcc1e2fd-4649-4c1a-9214-65edfba1813b</param.guid>
+    <unset>
+      <param.company />
+      <param.icon />
+      <param.icons />
+      <param.screenshot />
+      <param.version />
+      <param.products.name />
+      <param.products.id />
+      <param.products.version />
+      <param.platforms />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\dataAnalysisPlus.m</file>
+    </fileset.main>
+    <fileset.depfun>
+      <file>${PROJECT_ROOT}\closePlot.m</file>
+      <file>${PROJECT_ROOT}\fResize.m</file>
+      <file>${PROJECT_ROOT}\openAccelerationPlotDistance.m</file>
+      <file>${PROJECT_ROOT}\openAccelerationPlotTime.m</file>
+      <file>${PROJECT_ROOT}\openEnergyPlotDistance.m</file>
+      <file>${PROJECT_ROOT}\openEnergyPlotTime.m</file>
+      <file>${PROJECT_ROOT}\openFile.m</file>
+      <file>${PROJECT_ROOT}\openPositionPlotDistance.m</file>
+      <file>${PROJECT_ROOT}\openPositionPlotTime.m</file>
+      <file>${PROJECT_ROOT}\openPowerPlotDistance.m</file>
+      <file>${PROJECT_ROOT}\openPowerPlotTime.m</file>
+      <file>${PROJECT_ROOT}\openVelocityPlotDistance.m</file>
+      <file>${PROJECT_ROOT}\openVelocityPlotTime.m</file>
+      <file>${PROJECT_ROOT}\recordData.m</file>
+      <file>${PROJECT_ROOT}\viewProgram.m</file>
+    </fileset.depfun>
+    <fileset.resources />
+    <fileset.package />
+    <build-deliverables>
+      <file location="C:\Users\Noah\Documents\ENGR 1182.01" name="packaged" optional="false">C:\Users\Noah\Documents\ENGR 1182.01\packaged</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\MATLAB\R2015b</root>
+      <toolboxes>
+        <toolbox name="matlabcoder" />
+      </toolboxes>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>6.2</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
