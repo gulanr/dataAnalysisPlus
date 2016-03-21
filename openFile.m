@@ -39,6 +39,7 @@ E       = zeros(length(t),1);                       % Initialize vector
 for i = 2:length(t)-1                               % Calculate incremental energy and energy used so far (J)
     de(i+1) = ((Pin(i) + Pin(i+1))./2).*(t(i+1)-t(i));
     E(i) = sum(de);
+    
 end
 
 E(length(t)) = sum(de);                             % Calculate total energy used (J)
