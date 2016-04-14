@@ -6,7 +6,7 @@ function openFile(varargin)
 %
 % Author: Noah Gula, Dustin West
 % email address: gula.8@osu.edu
-% Last revision: 17 March 2016
+% Last revision: 14 Arpil 2016
 %==========================================================================
 
 % Assign GUI variables
@@ -15,9 +15,19 @@ f = varargin{1};
 % Get GUI data
 hData = guidata(f);
 
-% Ask user to select file
-[file,path] = uigetfile('*.mat','Select a file...');
+% Check if file and path are supplied from recordData()
+if hData.file
+    
+    % Get file and path from input arguments
+    file = hData.file;
+    path = hData.path;
+    
+else
+    
+    % Ask user to select file
+    [file,path] = uigetfile('*.mat','Select a file...');
 
+end
 % User cancels...
 if file == 0
     return
@@ -92,6 +102,12 @@ hData.matFile.v_avg    = v_avg;    % Average velocity (m/s)
 hData.matFile.a_avg    = a_avg;    % Average acceleration (m/s^2)
 hData.matFile.p_avg    = p_avg;    % Average supplied power (W)
 hData.matFile.e_avg    = e_avg;    % Average incremented energy (j)
+
+% Tells the software that a file has been loaded
+hData.fileLoaded = 1;
+
+% Set component in main UI
+hData.component.loadedFile.String = file;
 
 % Save GUI data
 guidata(f,hData);

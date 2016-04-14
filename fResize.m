@@ -6,7 +6,7 @@ function fResize(varargin)
 %
 % Author: Noah Gula
 % email address: gula.8@osu.edu
-% Last revision: 17 March 2016
+% Last revision: 14 Arpil 2016
 %==========================================================================
 
 % Assign GUI variables
@@ -26,7 +26,7 @@ width = 0.25;
 int = 0.97;
 
 % Create array for the y-positions of all textual components
-for i = 1:18
+for i = 1:19
     yPos(i) = (int-i*0.05);
 end
 
@@ -52,10 +52,17 @@ hData.component.averageAccelerationValue.Position = [0.01 yPos(14) width height]
 hData.component.averagePowerValue.Position = [0.01 yPos(16) width height];
 hData.component.averageEnergyValue.Position = [0.01 yPos(18) width height];
 
+% Position of loaded file
+hData.component.loadedFile.Position = [0.01 yPos(19) width height];
+
 % Set position and size of table
 hData.component.table.Position = [0.27 0.05 0.7 0.9];
 
 % Save position and size
 guidata(f,hData);
+
+if hData.debug
+	fprintf('[fResize] Figure resized.\n');
+end
 
 end

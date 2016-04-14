@@ -10,6 +10,9 @@ function closePlot(varargin)
 % Assign GUI variables
 f = varargin{1};
 
+% Get GUI data
+hData = guidata(f);
+
 % Find the main GUI's info
 currentFigure = get(groot,'CurrentFigure');
 
@@ -18,5 +21,9 @@ figures = findall(0,'Type','figure');
 
 % Close all figures whose number is greater than main UI
 delete(figures(currentFigure.Number+1:end));
+
+if hData.debug
+	fprintf('[closePlot] All plots closed.\n');
+end
 
 end

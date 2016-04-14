@@ -1,4 +1,4 @@
-function [fig] = dataAnalysisPlus()
+function dataAnalysisPlus()
 %==========================================================================
 % AEV Data Analysis Plus - Advanced Energy Vehicle Data Analysis Software
 %
@@ -11,7 +11,7 @@ function [fig] = dataAnalysisPlus()
 %
 % Author: Noah Gula
 % email address: gula.8@osu.edu
-% Last revision: 17 March 2016
+% Last revision: 14 April 2016
 %
 % This software was built with the help of Dustin West's AEV Analysis Tool
 % (no liscense). For more information, see the AEV lab manual.
@@ -65,6 +65,12 @@ uimenu(...
     'Parent',hTMenu,...
     'Label','View Arduino Program',...
     'Callback',{@viewProgram,f});
+
+% Turn on debug mode
+uimenu(...
+    'Parent',hTMenu,...
+    'Label','Turn on debug mode (advanced users)',...
+    'Callback',{@debugMode,f});
 
 % Create Plots menu
 hPMenu = uimenu;
@@ -302,6 +308,14 @@ hData.component.averageEnergyValue = uicontrol(...
     'BackgroundColor',[1 1 1],...
     'FontWeight','normal');
 
+hData.component.loadedFile = uicontrol(...
+    'Style','text',...
+    'Parent',f,...
+    'Units','normalized',...
+    'String','No file loaded.',...
+    'HorizontalAlignment','left',...
+    'FontWeight','normal');
+
 %==========================================================================
 % Construct table
 %==========================================================================
@@ -332,6 +346,28 @@ hData.component.table = uitable(...
     'ColumnFormat'  , columnformat,...
     'ColumnEditable', columneditable,...
     'units','normalized');
+
+%==========================================================================
+% Initialize variables for GUI
+%==========================================================================
+
+% Boolean if user has recently downloaded data from AEV, used in openFile()
+hData.file = 0;
+
+% Boolean if a file is loaded
+hData.fileLoaded = 0;
+
+% Boolean if user is in debug mode
+hData.debug = 0;
+
+% Boolean so that viewProgram works right
+hData.matFile.Code = {0};
+
+% Set output to compact (for use in debug mode)
+format compact
+
+% Save GUI data
+guidata(f,hData);
 
 %==========================================================================
 % Resize GUI

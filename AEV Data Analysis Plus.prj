@@ -1,37 +1,40 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration build-checksum="3674158560" file="C:\Users\Noah\Documents\ENGR 1182.01\dataAnalysisPlus\AEV Data Analysis Plus.prj" location="C:\Users\Noah\Documents\ENGR 1182.01\dataAnalysisPlus" name="AEV Data Analysis Plus" target="target.mlapps" target-name="Package App">
+  <configuration build-checksum="3477053339" file="C:\Users\Noah\Documents\dataAnalysisPlus\AEV Data Analysis Plus.prj" location="C:\Users\Noah\Documents\dataAnalysisPlus" name="AEV Data Analysis Plus" target="target.mlapps" target-name="Package App">
     <param.appname>AEV Data Analysis Plus</param.appname>
     <param.authnamewatermark>Noah Gula</param.authnamewatermark>
     <param.email>gula.8@osu.edu</param.email>
     <param.company>The Ohio State University</param.company>
     <param.icon />
     <param.icons />
-    <param.summary>Analysis software built on Dustin West's AEV_Analysis_Tool. Adds additional functionality.</param.summary>
-    <param.description>Analysis software built on Dustin West's AEV_Analysis_Tool. Adds additional functionality.</param.description>
+    <param.summary>Supplemental analysis tool for ENGR 1182</param.summary>
+    <param.description>See github.com/gulanr/dataAnalysisPlus</param.description>
     <param.screenshot />
-    <param.version>1.0</param.version>
+    <param.version>1.2</param.version>
     <param.products.name />
     <param.products.id />
     <param.products.version />
     <param.platforms />
-    <param.output>C:\Users\Noah\Documents\ENGR 1182.01\packaged</param.output>
-    <param.guid>fcc1e2fd-4649-4c1a-9214-65edfba1813b</param.guid>
+    <param.output>C:\Users\Noah\Documents\dataAnalysisPlus</param.output>
+    <param.guid>056777bf-86b6-41b2-ac2b-f78628560b00</param.guid>
     <unset>
+      <param.authnamewatermark />
+      <param.email />
       <param.company />
       <param.icon />
       <param.icons />
       <param.screenshot />
-      <param.version />
       <param.products.name />
       <param.products.id />
       <param.products.version />
       <param.platforms />
+      <param.output />
     </unset>
     <fileset.main>
       <file>${PROJECT_ROOT}\dataAnalysisPlus.m</file>
     </fileset.main>
     <fileset.depfun>
       <file>${PROJECT_ROOT}\closePlot.m</file>
+      <file>${PROJECT_ROOT}\debugMode.m</file>
       <file>${PROJECT_ROOT}\fResize.m</file>
       <file>${PROJECT_ROOT}\openAccelerationPlotDistance.m</file>
       <file>${PROJECT_ROOT}\openAccelerationPlotTime.m</file>
@@ -50,7 +53,7 @@
     <fileset.resources />
     <fileset.package />
     <build-deliverables>
-      <file location="C:\Users\Noah\Documents\ENGR 1182.01" name="packaged" optional="false">C:\Users\Noah\Documents\ENGR 1182.01\packaged</file>
+      <file location="C:\Users\Noah\Documents" name="dataAnalysisPlus" optional="false">C:\Users\Noah\Documents\dataAnalysisPlus</file>
     </build-deliverables>
     <workflow />
     <matlab>
