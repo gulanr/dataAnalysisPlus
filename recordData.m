@@ -6,7 +6,7 @@ function recordData(varargin)
 %
 % Author: Dustin West, Noah Gula
 % email address: gula.8@osu.edu
-% Last revision: 23 March 2016
+% Last revision: 1 November 2016
 %==========================================================================
 
 % Assign GUI variables
@@ -227,8 +227,15 @@ end
                 % Get name from the Microsoft Windows registry
                 ROOTKEY = 'name';
                 SUBKEY  = 'HKEY_LOCAL_MACHINE';
-                VALNAME = 'HARDWARE\DEVICEMAP\SERIALCOMM';
-                devices = winqueryreg(ROOTKEY, SUBKEY, VALNAME);
+                VALNAME = 'HARDWARE\DEVICEMAP';
+                if double(cell2mat(winqueryreg(ROOTKEY,SUBKEY,VALNAME)))
+                    ROOTKEY = 'name';
+                    SUBKEY  = 'HKEY_LOCAL_MACHINE';
+                    VALNAME = 'HARDWARE\DEVICEMAP\SERIALCOMM';
+                    devices = winqueryreg(ROOTKEY, SUBKEY, VALNAME);
+                else 
+                    devices = {};
+                end
                 
                 % Find current devices recognized by pc
                 ROOTKEY = 'HKEY_LOCAL_MACHINE';
