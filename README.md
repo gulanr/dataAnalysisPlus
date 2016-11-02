@@ -30,7 +30,7 @@ This tool allows the user to perform additional data analysis on AEV EEProm data
 ## TODO
 - ~~Add debug mode (additional output to the command window)~~ (See V 1.2)
 - Find bugs
-- Deploy to classmates
+- ~~Deploy to classmates~~
 - See [issues](https://github.com/gulanr/dataAnalysisPlus/issues) page
 
 //End of readme
