@@ -20,12 +20,14 @@ This tool allows the user to perform additional data analysis on AEV EEProm data
 
 ## Changelog
 - 17 March 2016 (1.0)
-  - Initial commit
+  - Initial commit.
 - 21 March 2016 (1.1)
   - Resolved issues [#2](https://github.com/gulanr/dataAnalysisPlus/issues/2), [#3](https://github.com/gulanr/dataAnalysisPlus/issues/3), [#4](https://github.com/gulanr/dataAnalysisPlus/issues/4), and [#5](https://github.com/gulanr/dataAnalysisPlus/issues/5).
 - 14 April 2016 (1.2)
   - Resolved issues [#7](https://github.com/gulanr/dataAnalysisPlus/issues/7), [#8](https://github.com/gulanr/dataAnalysisPlus/issues/8), [#9](https://github.com/gulanr/dataAnalysisPlus/issues/9), and [#10](https://github.com/gulanr/dataAnalysisPlus/issues/10).
   - Added debug mode.
+- 1 November 2016 (1.3)
+  - Resolved issue [#6](https://github.com/gulanr/dataAnalysisPlus/issues/6). 
 
 ## TODO
 - ~~Add debug mode (additional output to the command window)~~ (See V 1.2)
