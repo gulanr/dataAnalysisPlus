@@ -227,15 +227,8 @@ end
                 % Get name from the Microsoft Windows registry
                 ROOTKEY = 'name';
                 SUBKEY  = 'HKEY_LOCAL_MACHINE';
-                VALNAME = 'HARDWARE\DEVICEMAP';
-                if double(cell2mat(winqueryreg(ROOTKEY,SUBKEY,VALNAME)))
-                    ROOTKEY = 'name';
-                    SUBKEY  = 'HKEY_LOCAL_MACHINE';
-                    VALNAME = 'HARDWARE\DEVICEMAP\SERIALCOMM';
-                    devices = winqueryreg(ROOTKEY, SUBKEY, VALNAME);
-                else 
-                    devices = {};
-                end
+                VALNAME = 'HARDWARE\DEVICEMAP\SERIALCOMM';
+                devices = winqueryreg(ROOTKEY, SUBKEY, VALNAME);
                 
                 % Find current devices recognized by pc
                 ROOTKEY = 'HKEY_LOCAL_MACHINE';
